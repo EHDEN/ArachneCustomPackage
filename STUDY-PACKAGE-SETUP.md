@@ -42,7 +42,7 @@ projectFolder <- "E:/ArachneCustomPackage"
 setwd(projectFolder)
 
 # Download the lock file:
-download.file("https://raw.githubusercontent.com/ohdsi-studies/ScyllaCharacterization/master/renv.lock", "renv.lock")
+download.file("https://raw.githubusercontent.com/EHDEN/ArachneCustomPackage/main/renv.lock", "renv.lock")
 #Sys.setenv("BINPREF"="E:/R/Rtools/mingw_$(WIN)/bin/")
 
 #------------------------------------------------------------------
