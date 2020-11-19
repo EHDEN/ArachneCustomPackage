@@ -1,9 +1,14 @@
 # Install the R package in this folder
 
-setwd("./")
-tryCatch({
-  install.packages(file.path("."), repos = NULL, type = "source", INSTALL_opts=c("--no-multiarch"))
-}, finally = {})
+# setwd("./")
+# tryCatch({
+#   install.packages(file.path("."), repos = NULL, type = "source", INSTALL_opts=c("--no-multiarch"))
+# }, finally = {})
+
+
+
+
+source("renv/activate.R")
 
 # Get the database connection properties as set in the Data Node
 dbms <- Sys.getenv("DBMS_TYPE")
