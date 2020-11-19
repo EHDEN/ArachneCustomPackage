@@ -49,7 +49,7 @@ getNumberOfPersons <- function (connectionDetails,cdmDatabaseSchema,exportFolder
                            cdmDatabaseSchema = cdmDatabaseSchema)
   sql <- SqlRender::translate(sql = sql, targetDialect = connectionDetails$dbms)
   
-  result <- DatabaseConnector::querySql(connection = connection, sql = sql, errorReportFile = "cohortTableNotExist.sql")
+  result <- DatabaseConnector::querySql(connection = connection, sql = sql, errorReportFile = "getNumberofPersons.sql")
   
 }
                              
