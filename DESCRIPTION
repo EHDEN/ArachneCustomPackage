@@ -1,0 +1,28 @@
+Package: ArachneCustomPackage
+Type: Package
+Title: Example of a custom study package that can be executed by Arachne
+Version: 1.0.1
+Author: Peter Rijnbeek [aut, cre]
+Maintainer: Peter Rijnbeek <p.rijnbeek@erasmusmc.nl>
+Description: The purpose of this package is to demonstrate how a custom R package can be distributed in Arachne
+License: file LICENSE
+VignetteBuilder: knitr
+Depends:
+  DatabaseConnector (>= 3.0.0)
+Imports:
+  ParallelLogger (>= 2.0.0),
+  OhdsiSharing (>= 0.2.2),
+  SqlRender (>= 1.6.6),
+  Andromeda (>= 0.3.2)
+Suggests:
+  knitr,
+  rmarkdown
+Remotes:
+  OHDSI/CohortDiagnostics,
+  OHDSI/FeatureExtraction,
+  OHDSI/OhdsiSharing
+URL: https://github.com/EHDEN/ArachneCusomPackage
+BugReports: https://github.com/EHDEN/ArachneCusomPackage/issues
+Encoding: UTF-8
+LazyData: TRUE
+RoxygenNote: 7.1.1
