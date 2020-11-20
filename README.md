@@ -17,8 +17,6 @@ ArachneCustomPackage
 **Objectives:**
 The aim of this study is to demonstrate the creation of a study package that can executed in Arachne Data Node. This package uses Renv to assure the same versions of all R package dependencies are used.
 
-Specifically, the study aims to chararacterize:
-
 ## Package Usage
 
 The following will guide you through the package setup and execution process:
@@ -26,3 +24,5 @@ The following will guide you through the package setup and execution process:
 - [Study package setup](STUDY-PACKAGE-SETUP.md): Guides you through the steps to install the study package.
 - [Study execution](STUDY-EXECUTION.md): Guides you through the steps to execute the study package.
 
+## Status
+Under development do not use.
