@@ -20,9 +20,28 @@
 # @author Peter Rijnbeek
 
 #' @export
-getArachneFile <- function (targetFolder=getwd()){
+createArachneZip <- function (targetFolder=file.path(getwd(),"arachne")){
+  
+  # Copy all to targetFolder
+  dir.create(targetFolder)
   arachneFile <- system.file("", "Arachne.R", package = "ArachneCustomPackage")
   file.copy(arachneFile, targetFolder)
+  file.copy(file.path(getwd(),"renv.lock"), targetFolder)
+  file.copy(file.path(getwd(),"renv"), targetFolder, recursive = TRUE)
+  
+  
+  # Zip the results
+  zipName <- file.path(targetFolder, "Arachne Package.zip")
+  #files <- list.files(exportFolder, pattern = ".*\\.csv$")
+  files <- list.files(targetFolder, pattern = ".*")
+  oldWd <- setwd(targetFolder)
+  on.exit(setwd(oldWd), add = TRUE)
+  DatabaseConnector::createZipFile(zipFile = zipName, files = files)
+  
+  # Clean up
+  unlink(file.path(targetFolder,"renv"),recursive = TRUE)
+  unlink(file.path(targetFolder,"renv.lock"))
+  unlink(file.path(targetFolder,"Arachne.R"))
 }  
 
 
